@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Model</title>
+</head>
+<body>
+    <h1>Language Model</h1>
+    <form method="POST" action="/">
+        <label for="input_text">Enter Text:</label>
+        <input type="text" name="input_text" id="input_text" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if input_text %}
+        <h2>Input Text: {{ input_text }}</h2>
+        <h2>Predicted Next Word: {{ predicted_word }}</h2>
+    {% endif %}
+</body>
+</html>
