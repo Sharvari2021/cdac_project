@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HindiNext Model Predictions</title>
+</head>
+<body>
+    <h1>HindiNext Model Predictions</h1>
+    
+    <form action="/" method="post">
+        <label for="input_text">Enter text:</label><br>
+        <input type="text" id="input_text" name="input_text"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if lstm_predicted_word and bert_predicted_word %}
+    <h2>LSTM Predicted Word:</h2>
+    <p>{{ lstm_predicted_word }}</p>
+    
+    <h2>BERT Predicted Word:</h2>
+    <p>{{ bert_predicted_word }}</p>
+    {% endif %}
+</body>
+</html>
